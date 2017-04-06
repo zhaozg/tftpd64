@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include=".\_common\dialog_common.c" />
+    <ClCompile Include=".\_common\setinifilename.c" />
+    <ClCompile Include=".\_gui\about.c" />
+    <ClCompile Include=".\_gui\browse.c" />
+    <ClCompile Include=".\_gui\gui_bootpd.c" />
+    <ClCompile Include=".\_gui\gui_bootpd_settings.c" />
+    <ClCompile Include=".\_gui\gui_dialog.c" />
+    <ClCompile Include=".\_gui\gui_dns.c" />
+    <ClCompile Include=".\_gui\gui_gauges.c" />
+    <ClCompile Include=".\_gui\gui_log.c" />
+    <ClCompile Include=".\_gui\gui_main.c" />
+    <ClCompile Include=".\_gui\gui_move_win.c" />
+    <ClCompile Include=".\_gui\gui_settings.c" />
+    <ClCompile Include=".\_gui\gui_syslogd.c" />
+    <ClCompile Include=".\_gui\gui_tftpd.c" />
+    <ClCompile Include=".\_gui\gui_tftp_dir.c" />
+    <ClCompile Include=".\_gui\tftp_cli.c" />
+    <ClCompile Include=".\_main\cmd_line.c" />
+    <ClCompile Include=".\_main\main.c" />
+    <ClCompile Include=".\_main\outofthebox.c" />
+    <ClCompile Include=".\_services\async_log.c" />
+    <ClCompile Include=".\_services\bootpd.c" />
+    <ClCompile Include=".\_services\bootpd_console.c" />
+    <ClCompile Include=".\_services\bootpd_util.c" />
+    <ClCompile Include=".\_services\console_actions.c" />
+    <ClCompile Include=".\_services\dns.c" />
+    <ClCompile Include=".\_services\ip_thread.c" />
+    <ClCompile Include=".\_services\ip_util.c" />
+    <ClCompile Include=".\_services\registry_thread.c" />
+    <ClCompile Include=".\_services\service_main.c" />
+    <ClCompile Include=".\_services\settings.c" />
+    <ClCompile Include=".\_services\sntpd.c" />
+    <ClCompile Include=".\_services\start_threads.c" />
+    <ClCompile Include=".\_services\syslogd.c" />
+    <ClCompile Include=".\_services\tftpd_main.c" />
+    <ClCompile Include=".\_services\tftpd_thread.c" />
+    <ClCompile Include=".\_services\tftpd_util.c" />
+    <ClCompile Include=".\_services\tftp_dbg.c" />
+    <ClCompile Include=".\_services\to_console.c" />
+    <ClCompile Include="_main\firewall.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\_gui\tftpd32.rc" />
+  </ItemGroup>
+</Project>
