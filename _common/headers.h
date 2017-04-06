@@ -44,7 +44,7 @@
 #include "_libs/mini_tcp4u/tcp4u.h"
 #include "_libs/scandir/scandir.h"
 #include "_libs/log/logtomonitor.h"
-
+#include "_libs/encode/encode.h"
 
 #include "_common\settings.h"
 #include "_common\bootpd_util.h"

@@ -57,8 +57,8 @@ int Ark;
       )  return FALSE;
 
    SyslogTxt[nSize] = 0;
-   for (Ark=0 ;  Ark<nSize ;  Ark++)
-     if (! isascii (SyslogTxt[Ark]))  SyslogTxt[Ark]='.';
+   for (Ark=0 ;  Ark<nSize && SyslogTxt[Ark];  Ark++)
+     if (iscntrl(SyslogTxt[Ark]))  SyslogTxt[Ark]='.';
 
 return TRUE;
 } // CheckSyslogMsg
@@ -97,6 +97,16 @@ struct S_SyslogMsg msg;
       Rc = recvfrom (sSyslogListenSocket, szSyslogBuf, SYSLOG_MAXMSG, 
                      0, (struct sockaddr *) & sSock, & nDummy);
 
+      if (Rc > 0) {
+        char     tmp[SYSLOG_MAXMSG + 1] = { 0 }; // Buffer
+        size_t ol = sizeof(tmp) - 1;
+        int len = UTF8ToANSI(tmp, ol, szSyslogBuf, Rc);
+        if (len > 0) {
+          memcpy(szSyslogBuf, tmp, len);
+          szSyslogBuf[len] = '\0';
+          Rc = len;
+        }
+      }
       // something received and format OK
       if (Rc>0  && CheckSyslogMsg (szSyslogBuf, Rc) )
       {
